@@ -118,6 +118,9 @@
 \usepackage{verbatim}
 \usepackage{hyperref}
 
+\usepackage{xcolor}
+\definecolor{lsDOIGray}{cmyk}{0,0,0,0.45}
+
 \usepackage[
   bibstyle=muss,
   citestyle=muss,
@@ -129,6 +132,67 @@
 \listfiles                      % print list of used packages in log file 
 
 \begin{document}
+
+\section{Tests of muss.bbx}
+
+\subsection{Article}
+
+\begin{itemize}
+\item \fullcite{Bach:80}
+\end{itemize}
+
+\subsection{Book}
+
+\begin{itemize}
+\item \fullcite{Mueller:20-grammatical}
+\item \fullcite{VanValin:05}
+\end{itemize}
+
+\subsection{Collection}
+
+\begin{itemize}
+\item \fullcite{Corbett:etal:eds:93-heads}
+\end{itemize}
+
+\subsection{InCollection}
+
+\begin{itemize}
+\item \fullcite{Zwicky:93}
+\end{itemize}
+
+\subsection{InProceedings}
+
+\begin{itemize}
+\item \fullcite{Bach:81}
+\item \fullcite{Nallapati:etal:16}
+\end{itemize}
+
+\subsection{Thesis}
+
+\begin{itemize}
+\item \fullcite{Abney:87}
+\end{itemize}
+
+\subsection{Online}
+
+\begin{itemize}
+\item \fullcite{Haagsma:etal:19-casting}
+\end{itemize}
+
+\subsection{Manual}
+
+\begin{itemize}
+\item \fullcite{McConnel:97-PC-PATR}
+\end{itemize}
+
+\subsection{Report}
+
+\begin{itemize}
+\item \fullcite{Penn:99-optimized}
+\end{itemize}
+
+
+\newpage
 
 \section{Tests of muss.cbx}
 
@@ -155,8 +219,6 @@
 \end{itemize} 
 
 \newpage
-
-\section{Tests of muss.bbx}
 
 \printbibliography 
 \end{document}

@@ -50,13 +50,15 @@ MUSS assumes that an entry of the list of references always consists of the foll
 |             |                                | publisher        | publisher        | url+urldate         | url+urldate      | url+urldate | url+urldate | url+urldate              | url+urldate |
 | NOTE        | note                           | note             | note             | note                | note             | note        | note        | note                     | note        |
 
+Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
+
 MUSS differs from USS in the following details:
 - PARTOF is preceded by "In" also with articles. In USS, journal names are not preceded by "In".
 - There is no address field. Never.
 - If no DOI is provided, the URL is printed. Not both.
 - The publisher is only printed with books and collections if no URL is given.
 
-Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
+For comparison, see the output of MUSS in [[file:test.pdf]] and the output of USS in [[file:test-langsci-uss.pdf]] using langsci-unified.bbx.
 
 * Requirements and dependencies
 
