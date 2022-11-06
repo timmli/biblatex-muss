@@ -1,6 +1,8 @@
 #+TITLE: MUSS: Minimal Unified Style Sheet
 #+AUTHOR: Timm Lichte
 
+This README uses [[https://orgmode.org/][Org mode]].
+
 * About 
 
 MUSS is a style sheet for BibLaTeX that seeks minimality in different ways:
