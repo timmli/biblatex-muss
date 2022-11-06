@@ -1,0 +1,167 @@
+\begin{filecontents}[overwrite]{\jobname.bib}
+
+@thesis{Abney:87,
+  author = {Abney, Steven},
+  title = {The {English} Noun Phrase in its Sentential Aspect},
+  school = {MIT},
+  type = {PhD thesis},
+  address = {Cambridge, MA},
+  year = {1987},
+  url = {http://hdl.handle.net/1721.1/14638},
+}
+
+@book{VanValin:05,
+  author = {Van Valin, Jr., Robert D.},
+  title = {Exploring the Syntax-Semantics Interface},
+  year = {2005},
+  publisher = {Cambridge University Press},
+  address = {Cambridge},
+}
+
+
+@inproceedings{Nallapati:etal:16,
+  author = {Nallapati, Ramesh and Zhou, Bowen and dos Santos, Cicero and  Çağlar Gulçehre and Xiang, Bing},
+  title = {Abstractive Text Summarization using Sequence-to-sequence {RNN}s and Beyond},
+  pages = {280--290},
+  booktitle = {Proceedings of The 20th {SIGNLL} Conference on Computational Natural Language Learning},
+  year = {2016},
+  address = {Berlin, Germany},
+  url = {https://www.aclweb.org/anthology/K16-1028},
+  doi = {10.18653/v1/K16-1028},
+}
+
+@article{Bach:80,
+  author = {Emmon Bach},
+  title = {In defense of passive},
+  year = {1980},
+  volume = {3},
+  number = {3},
+  pages = {297--341},
+  journal = {Linguistics and Philosophy},
+  doi = {10.1007/BF00401689},
+  note = {This is a note.},
+}
+
+@inproceedings{Bach:81,
+  author = {Bach, Emmon},
+  title = {Discontinuous constituents in generalized categorial grammars},
+  booktitle = {Proceedings of the 11th Annual Meeting of the Northeast Linguistic Society (NELS 11)},
+  year = {1981},
+  pages = {1--12},
+}
+
+@online{Haagsma:etal:19-casting,
+  title = {Casting a Wide Net: {Robust} Extraction of Potentially Idiomatic Expressions},
+  author = {Haagsma, Hessel and Nissim, Malvina and Bos, Johan},
+  year = {2019},
+  url = {https://arxiv.org/abs/1911.08829v1},
+  urldate = {2022-03-29},
+}
+
+@incollection{Zwicky:93,
+  author = {Arnold M. Zwicky},
+  title = {Heads, bases and functors},
+  pages = {292--315},
+  year = {1993},
+  editor = {Corbett, Greville G. and Fraser, Norman M. and McGlashan, Scott},
+  publisher = {Cambridge University Press},
+  address = {Cambridge, UK},
+  booktitle = {Heads in Grammatical Theory},
+}
+
+@collection{Corbett:etal:eds:93-heads,
+  year = {1993},
+  editor = {Corbett, Greville G. and Fraser, Norman M. and McGlashan, Scott},
+  publisher = {Cambridge University Press},
+  address = {Cambridge, UK},
+  title = {Heads in Grammatical Theory},
+}
+
+@book{Mueller:20-grammatical,
+  author = {Müller, Stefan},
+  title = {Grammatical theory},
+  year = {2020},
+  series = {Textbooks in Language Sciences},
+  number = {1},
+  edition = {4},
+  address = {Berlin},
+  institution = {The institution field does not make sense here and should be ignored},
+  publisher = {Language Science Press},
+  doi = {10.5281/zenodo.3992307}
+}
+
+@report{Penn:99-optimized,
+  author      = {Penn, Gerald},
+  title       = {An optimized Prolog encoding of typed feature structures},
+  institution = {University of T\"ubingen},
+  year        = {1999},
+  type        = {Arbeitspapiere des SFB 340},
+  number      = {138}
+}
+
+@manual{McConnel:97-PC-PATR,
+  author = {Stephen McConnel},
+  title = {{PC-PATR} Reference Manual},
+  year = {1997},
+  note = {Version 0.99b5},
+  organization = {Summer Institute of Linguistics},
+  url = {http://www.sil.org/pcpatr/manual/pcpatr.html},
+  address = {Dallas, TX}
+}
+
+
+}
+
+\end{filecontents}
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+\usepackage[
+  bibstyle=muss,
+  citestyle=muss,
+  % bibstyle=other/langsci-unified,
+  % citestyle=other/langsci-unified,
+  ]{biblatex}
+\addbibresource{\jobname.bib}
+
+\listfiles                      % print list of used packages in log file 
+
+\begin{document}
+
+\section{Tests of muss.cbx}
+
+\begin{itemize}
+\item \verb=\nocite= \nocite{VanValin:05} \nocite{Abney:87} \nocite{Bach:80,Bach:81} \nocite{Zwicky:93} \nocite{Haagsma:etal:19-casting} \nocite{Corbett:etal:eds:93-heads} \nocite{Mueller:20-grammatical} \nocite{Penn:99-optimized} \nocite{McConnel:97-PC-PATR}
+\item \verb=\fullcite=:  \fullcite{Nallapati:etal:16}
+\item \verb=\textcite=: \textcite{Nallapati:etal:16}
+\item \verb=\parencite=: \parencite{Nallapati:etal:16}
+\item \verb=\parencite*=: \parencite*{Nallapati:etal:16}
+% \item \verb=\noparencite=: \noparencite{Nallapati:etal:16}
+% \item \verb=\noparencite*=: \noparencite*{Nallapati:etal:16}
+\item \verb=\smartcite=: \smartcite{Nallapati:etal:16}
+\item \verb=\footcite=: \footcite{Nallapati:etal:16}
+\item \verb=\footfullcite=:  \footfullcite{Nallapati:etal:16}
+\item \verb=\supercite=: \supercite{Nallapati:etal:16}
+\item \verb=\footcitetext=: \footcitetext{Nallapati:etal:16}
+\item \verb=\cite=:  \cite{Nallapati:etal:16}
+\item \verb=\cite*=:  \cite*{Nallapati:etal:16}
+\item \verb=\citeauthor=: \citeauthor{Nallapati:etal:16}
+\item \verb=\citeauthor*=: \citeauthor*{Nallapati:etal:16}
+\item \verb=\citeurl=: \citeurl{Nallapati:etal:16}
+\item \verb=\citetitle=: \citetitle{Nallapati:etal:16}
+\item \verb=\citeyear=: \citeyear{Nallapati:etal:16}
+\end{itemize} 
+
+\newpage
+
+\section{Tests of muss.bbx}
+
+\printbibliography 
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

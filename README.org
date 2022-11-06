@@ -1,0 +1,79 @@
+#+TITLE: MUSS: Minimal Unified Style Sheet
+#+AUTHOR: Timm Lichte
+
+* About 
+
+MUSS is a style sheet for BibLaTeX that seeks minimality in different ways:
+
+1) Minimality of supported entry types: MUSS supports only a small set of entry types and fields that I consider most important in my field (natural language processing). 
+2) Minimality of backward compatiblity: MUSS will only be compatible with recent versions of BibLaTeX.
+3) Minimality of code: Because of (1) and (2), MUSS has a very slim codebase and is maximally self-contained. In fact, there is only *one* generic driver which is used for articles, books, etc.
+
+MUSS was heavily inspired by, but uses only certain characteristics of,
+
+- Unified Style Sheet (USS), a set of general style rules for references
+  (see https://www.linguisticsociety.org/resource/unified-style-sheet)
+- langsci-unified.bbx, an BibLaTeX implementation of the USS that is part of the
+  langscibook class (see https://github.com/langsci/langscibook),
+  and therefore also biblatex-unified.bbx, on which langsci-unified.bbx is based
+  (see https://github.com/semprag/biblatex-sp-unified)
+
+MUSS comes with two files:
+
+- muss.bbx specifies the structure and formatting of entries in a list of references.
+- muss.cbx specifies the look of cite commands in the text.
+
+List of currently supported entry types:
+article, book, collection, incollection, inproceedings, manual, online, (phd)thesis,
+(tech)report, thesis
+
+List of currently supported entry fields (depending on the entry type):
+author, booksubtitle, booktitle, doi, edition, editor, institution, journal, note, number, pages,
+publisher, school, subtitle, title, type, url, urldate, volume, year
+
+Yes, there is no address field; this is a deliberate decision.
+
+* Differences to the Unified Style Sheet
+
+MUSS assumes that an entry of the list of references always consists of the following parts regardless of the type of reference:
+
+| Entry parts | article                        | book             | collection       | incollection        | inproceedings    | manual      | online      | thesis/phdthesis         | (tech)report |
+|-------------+--------------------------------+------------------+------------------+---------------------+------------------+-------------+-------------+--------------------------+-------------|
+| AUTHOR      | author                         | author           | editor           | author              | author           | author      | author      | author                   | author      |
+| YEAR        | year                           | year             | year             | year                | year             | year        | year        | year                     | year        |
+| TITLE       | title                          | title            | title/booktitle  | title               | title            | title       | title       | title                    | title       |
+| TYPEOF      |                                | series, number   | series, number   |                     |                  |             |             | type, school/instutition |             |
+| PARTOF      | journal, pages, volume, number | edition          | edition          | collection, pages   | booktitle, pages |             |             |                          |             |
+| LINK        | doi/url+urldate                | doi/url+urldate/ | doi/url+urldate/ | doi/                | doi/             | doi/        | doi/        | doi/                     | doi/        |
+|             |                                | publisher        | publisher        | url+urldate         | url+urldate      | url+urldate | url+urldate | url+urldate              | url+urldate |
+| NOTE        | note                           | note             | note             | note                | note             | note        | note        | note                     | note        |
+
+MUSS differs from USS in the following details:
+- PARTOF is preceded by "In" also with articles. In USS, journal names are not preceded by "In".
+- There is no address field. Never.
+- If no DOI is provided, the URL is printed. Not both.
+- The publisher is only printed with books and collections if no URL is given.
+
+Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
+
+* Installation and use
+
+Simply copy muss.bbx and muss.cbx to your LaTeX project and tell BibLaTeX to use it:
+
+#+BEGIN_SRC latex 
+\usepackage[
+  bibstyle=muss,
+  citestyle=muss,
+  ]{biblatex}
+#+END_SRC
+
+Take a look at [[file:test.tex]] for a complete example.
+
+* Roadmap
+
+- [ ] Overhaul muss.cbx
+      - [ ] Remove outdated code
+      - [ ] Simplify code
+- [ ] Add CSL file
+- [ ] Add default value for type in @thesis
+- [ ] Add type and institution in @report
