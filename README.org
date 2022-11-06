@@ -58,6 +58,10 @@ MUSS differs from USS in the following details:
 
 Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
 
+* Requirements and dependencies
+
+The most recent version of MUSS is tested with BibLaTeX v3.17.
+
 * Installation and use
 
 Simply copy muss.bbx and muss.cbx to your LaTeX project and tell BibLaTeX to use it:
