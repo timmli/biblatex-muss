@@ -37,7 +37,7 @@ Yes, there is no address field; this is a deliberate decision.
 
 * Differences to the Unified Style Sheet
 
-MUSS assumes that an entry of the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, LINK and NOTE, which are associated with different fields depending on the type of reference:
+MUSS assumes that an entry in the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, LINK and NOTE, which are associated with different fields depending on the type of reference:
 
 | Entry parts | article                        | book             | collection       | incollection        | inproceedings    | manual      | online      | thesis/phdthesis         | (tech)report |
 |-------------+--------------------------------+------------------+------------------+---------------------+------------------+-------------+-------------+--------------------------+-------------|
