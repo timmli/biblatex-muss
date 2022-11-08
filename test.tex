@@ -129,6 +129,17 @@
   ]{biblatex}
 \addbibresource{\jobname.bib}
 
+\makeatletter
+\DeclareCiteCommand{\myfullcite}
+{\defcounter{maxnames}{\blx@maxbibnames}%
+  \usebibmacro{prenote}}
+{\usedriver
+  {}
+  {\thefield{entrytype}}\usebibmacro{finentry}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
+\makeatother
+ 
 \listfiles                      % print list of used packages in log file 
 
 \begin{document}
@@ -138,57 +149,57 @@
 \subsection{Article}
 
 \begin{itemize}
-\item \fullciteImprint{Bach:80}
+\item \myfullcite{Bach:80}
 \end{itemize}
 
 \subsection{Book}
 
 \begin{itemize}
-\item \fullciteImprint{Mueller:20-grammatical}
-\item \fullciteImprint{VanValin:05}
+\item \myfullcite{Mueller:20-grammatical}
+\item \myfullcite{VanValin:05}
 \end{itemize}
 
 \subsection{Collection}
 
 \begin{itemize}
-\item \fullciteImprint{Corbett:etal:eds:93-heads}
+\item \myfullcite{Corbett:etal:eds:93-heads}
 \end{itemize}
 
 \subsection{InCollection}
 
 \begin{itemize}
-\item \fullciteImprint{Zwicky:93}
+\item \myfullcite{Zwicky:93}
 \end{itemize}
 
 \subsection{InProceedings}
 
 \begin{itemize}
-\item \fullciteImprint{Bach:81}
-\item \fullciteImprint{Nallapati:etal:16}
+\item \myfullcite{Bach:81}
+\item \myfullcite{Nallapati:etal:16}
 \end{itemize}
 
 \subsection{Thesis}
 
 \begin{itemize}
-\item \fullciteImprint{Abney:87}
+\item \myfullcite{Abney:87}
 \end{itemize}
 
 \subsection{Online}
 
 \begin{itemize}
-\item \fullciteImprint{Haagsma:etal:19-casting}
+\item \myfullcite{Haagsma:etal:19-casting}
 \end{itemize}
 
 \subsection{Manual}
 
 \begin{itemize}
-\item \fullciteImprint{McConnel:97-PC-PATR}
+\item \myfullcite{McConnel:97-PC-PATR}
 \end{itemize}
 
 \subsection{Report}
 
 \begin{itemize}
-\item \fullciteImprint{Penn:99-optimized}
+\item \myfullcite{Penn:99-optimized}
 \end{itemize}
 
 
