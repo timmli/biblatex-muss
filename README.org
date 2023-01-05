@@ -61,6 +61,8 @@ MUSS differs from USS in the following details:
 
 For comparison, see the output of MUSS in [[file:test.pdf]] and the output of USS in [[file:test-langsci-uss.pdf]] using langsci-unified.bbx.
 
+[[file:comparison1.png]]
+
 * Requirements and dependencies
 
 The most recent version of MUSS is tested with BibLaTeX v3.17.
