@@ -39,16 +39,17 @@ Yes, there is no address field; this is a deliberate decision.
 
 MUSS assumes that an entry in the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, LINK and NOTE, which are associated with different fields depending on the type of reference:
 
-| Entry parts | article                        | book             | collection       | incollection        | inproceedings    | manual      | online      | thesis/phdthesis         | (tech)report |
-|-------------+--------------------------------+------------------+------------------+---------------------+------------------+-------------+-------------+--------------------------+-------------|
-| AUTHOR      | author                         | author           | editor           | author              | author           | author      | author      | author                   | author      |
-| YEAR        | year                           | year             | year             | year                | year             | year        | year        | year                     | year        |
-| TITLE       | title                          | title            | title/booktitle  | title               | title            | title       | title       | title                    | title       |
-| TYPEOF      |                                | series, number   | series, number   |                     |                  |             |             | type, school/instutition |             |
-| PARTOF      | journal, pages, volume, number | edition          | edition          | collection, pages   | booktitle, pages |             |             |                          |             |
-| LINK        | doi/url+urldate                | doi/url+urldate/ | doi/url+urldate/ | doi/                | doi/             | doi/        | doi/        | doi/                     | doi/        |
-|             |                                | publisher        | publisher        | url+urldate         | url+urldate      | url+urldate | url+urldate | url+urldate              | url+urldate |
-| NOTE        | note                           | note             | note             | note                | note             | note        | note        | note                     | note        |
+| Entry parts $\to$  | AUTHOR | YEAR | TITLE           | TYPEOF                   | PARTOF                         | LINK                      | NOTE |
+|------------------+--------+------+-----------------+--------------------------+--------------------------------+---------------------------+------|
+| article          | author | year | title           |                          | journal, pages, volume, number | doi/url+urldate           | note |
+| book             | author | year | title           | series, number           | edition                        | doi/url+urldate/publisher | note |
+| collection       | editor | year | title/booktitle | series, number           | edition                        | doi/url+urldate/publisher | note |
+| incollection     | author | year | title           |                          | @collection, pages             | doi/url+urldate           | note |
+| inproceedings    | author | year | title           |                          | booktitle, pages               | doi/url+urldate           | note |
+| manual           | author | year | title           |                          |                                | doi/url+urldate           | note |
+| online           | author | year | title           |                          |                                | doi/url+urldate           | note |
+| thesis/phdthesis | author | year | title           | type, school/instutition |                                | doi/url+urldate           | note |
+| (tech)report     | author | year | title           |                          |                                | doi/url+urldate           | note |
 
 Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
 
