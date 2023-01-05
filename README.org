@@ -35,7 +35,7 @@ publisher, school, subtitle, title, type, url, urldate, volume, year
 
 Yes, there is no address field; this is a deliberate decision.
 
-* Differences to the Unified Style Sheet
+* The entry structure of MUSS
 
 MUSS assumes that an entry in the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, LINK and NOTE, which are associated with different fields depending on the type of reference:
 
@@ -52,6 +52,8 @@ MUSS assumes that an entry in the list of references consists of the parts AUTHO
 | (tech)report     | author | year | title           |                          |                                | doi/url+urldate           | note |
 
 Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
+
+* Differences to the Unified Style Sheet
 
 MUSS differs from USS in the following details:
 - PARTOF is preceded by "In" also with articles. In USS, journal names are not preceded by "In".
