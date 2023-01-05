@@ -87,6 +87,7 @@
 \renewcommand*{\finalnamedelim}{\addspace\&\addspace} % Use ampersand in name lists
 \renewcommand*{\finallistdelim}{\addspace\&\addspace} % Use ampersand in name lists
 % \renewcommand*{\finentrypunct}{} % Remove period from end of entry.
+% \renewcommand*{\finentrypunct}{\addperiod} % Entry should always end with a period.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
@@ -103,7 +104,7 @@
 \DeclareFieldFormat[book,collection,thesis]{title}{\mkbibemph{#1}}
 
 % Put square brackets around note.
-\DeclareFieldFormat{note}{\mkbibbrackets{#1\isdot}}
+\DeclareFieldFormat{note}{\mkbibbrackets{#1}}
 
 % The booktitles are printed with italics.
 \DeclareFieldFormat{booktitle}{\mkbibemph{#1}}
@@ -268,6 +269,12 @@
   {}
 }
 
+% muss:finentry is introduced to have better control.
+% BibLaTeX's finentry does not always work as expected, e.g. with \fullcite.  
+\newbibmacro*{muss:finentry}{%
+  \addperiod%
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 % Entry drivers
@@ -292,7 +299,7 @@
   \newunit%
   \usebibmacro{muss:doi+url+publisher}%
   \newunit%
-  \usebibmacro{finentry}%
+  \usebibmacro{muss:finentry}%
   \usebibmacro{muss:note}%
 }
 

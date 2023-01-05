@@ -131,13 +131,17 @@
 
 \makeatletter
 \DeclareCiteCommand{\myfullcite}
-{\defcounter{maxnames}{\blx@maxbibnames}%
-  \usebibmacro{prenote}}
-{\usedriver
+{% precode
+  \defcounter{maxnames}{\blx@maxbibnames}%
+}
+{%loopcode
+  \usedriver
   {}
-  {\thefield{entrytype}}\usebibmacro{finentry}}
-{\multicitedelim}
-{\usebibmacro{postnote}}
+  {\thefield{entrytype}}}
+{%sepcode
+}
+{%postcode
+}
 \makeatother
  
 \listfiles                      % print list of used packages in log file 
