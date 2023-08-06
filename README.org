@@ -67,7 +67,7 @@ For comparison, see the output of MUSS in [[file:test.pdf]] and the output of US
 
 * Requirements and dependencies
 
-The most recent version of MUSS is tested with BibLaTeX v3.17.
+The most recent version of MUSS is tested with BibLaTeX v3.19.
 
 * Installation and use
 

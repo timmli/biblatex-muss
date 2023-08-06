@@ -1398,6 +1398,11 @@
   }
 }
 
+\DeclareExtradateContext{%
+  \field{labelname}
+  \field{labeltitle}
+}
+
 \DeclareLabeltitle{%
   \field{shorttitle}
   \field{title}
@@ -1472,6 +1477,7 @@
 
 \DeclareSortingTemplate{none}{
   \sort{\citeorder}
+  \sort{\intciteorder}
 }
 
 \DeclareSortingTemplate{count}{
