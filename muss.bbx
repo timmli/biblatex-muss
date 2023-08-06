@@ -1,7 +1,7 @@
 % File:    muss.bbx
 % Author:  Timm Lichte (http://timm-lichte.de)
-% Date:    2023-01-06T09:54:05+01:00
-% Version: 0.1.1 (tested with BibLaTeX v3.17)
+% Date:    2023-08-06T12:36:06+0200
+% Version: 0.2 (tested with BibLaTeX v3.19)
 % License: LPPL Version 1.3c
 %
 % ----------------------------------
@@ -73,9 +73,15 @@
 % Special strings
 %%%%%%%%%%%%%%%%%%%%%%%% 
 
+\NewBibliographyString{thesisat}
+\NewBibliographyString{reportat}
+
 \DefineBibliographyStrings{english}{%
   edition          = {edn\adddot},
-  phdthesis        = {Doctoral dissertation},
+  phdthesis        = {doctoral dissertation}, % default string used when type is undefined
+  techreport       = {technical report},      % default string used when type is undefined
+  thesisat         = {at},
+  reportat         = {at},
 }
 
 
@@ -212,7 +218,7 @@
   {}
   \ifentrytype{inproceedings}
   {\usebibmacro{in:}%
-    \usebibmacro{muss:booktitle}
+    \usebibmacro{muss:booktitle}%
     \setunit{\addcomma\space}%
     \usebibmacro{muss:pages}}% 
   {}
@@ -221,7 +227,7 @@
     \ifnameundef{editor}
     {\setunit{\addspace}}
     {\usebibmacro{muss:byeditor+others}
-      \setunit{\addcomma\space}}
+      \setunit{\addcomma\space}}%
     \usebibmacro{muss:booktitle}%
     \setunit{\addcomma\space}%
     \printfield{edition}%
@@ -238,11 +244,11 @@
 }
 
 \newbibmacro*{muss:type+institution}{%
-  \ifentrytype{thesis}
-  {\printfield{type} at \printlist{institution}}
-  {}%
   \ifentrytype{report}
-  {\printfield{type} \printfield{number} from \printlist{institution}}
+  {\printfield{type}\addspace\printfield{number}\addspace\bibstring{thesisat}\addspace\printlist{institution}}
+  {}%
+  \ifentrytype{thesis}
+  {\printfield{type}\addspace\bibstring{thesisat}\addspace\printlist{institution}}
   {}%
 }
 
