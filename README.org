@@ -48,7 +48,7 @@ MUSS assumes that an entry in the list of references consists of the parts AUTHO
 | inproceedings    | author | year | title           |                          | booktitle, pages               | doi/url+urldate           | note |
 | manual           | author | year | title           |                          |                                | doi/url+urldate           | note |
 | online           | author | year | title           |                          |                                | doi/url+urldate           | note |
-| thesis/phdthesis | author | year | title           | type, school/instutition |                                | doi/url+urldate           | note |
+| (phd)thesis      | author | year | title           | type, school/instutition |                                | doi/url+urldate           | note |
 | (tech)report     | author | year | title           | type, institution        |                                | doi/url+urldate           | note |
 
 Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
