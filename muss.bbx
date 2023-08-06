@@ -99,10 +99,10 @@
 \DeclareFieldFormat{pages}{#1}
 
 % No quotes around titles (drivers have to be specified)
-\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1}
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,report,unpublished]{title}{#1}
 
-% The titles of books and theses are printed with italics.
-\DeclareFieldFormat[book,collection,thesis]{title}{\mkbibemph{#1}}
+% The titles of books, reports and theses are printed with italics.
+\DeclareFieldFormat[book,collection,report,thesis]{title}{\mkbibemph{#1}}
 
 % Put square brackets around note.
 \DeclareFieldFormat{note}{\mkbibbrackets{#1}}
@@ -237,8 +237,13 @@
   {}%
 }
 
-\newbibmacro*{muss:thesistype+institution}{%
-  \printfield{type} at \printlist{institution}%
+\newbibmacro*{muss:type+institution}{%
+  \ifentrytype{thesis}
+  {\printfield{type} at \printlist{institution}}
+  {}%
+  \ifentrytype{report}
+  {\printfield{type} \printfield{number} from \printlist{institution}}
+  {}%
 }
 
 \newbibmacro*{muss:title}{%
@@ -256,8 +261,12 @@
 }
 
 \newbibmacro*{muss:typeof}{%
-  \ifentrytype{thesis}
-  {\printtext[parens]{\usebibmacro{muss:thesistype+institution}}}
+  \ifboolexpr{%
+    test {\ifentrytype{report}}
+    or
+    test {\ifentrytype{thesis}}
+  }
+  {\printtext[parens]{\usebibmacro{muss:type+institution}}}
   {}
   \ifboolexpr{%
     test {\ifentrytype{book}}
@@ -310,15 +319,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%% 
 
 \DeclareBibliographyAlias{article}{object}
-\DeclareBibliographyAlias{inproceedings}{object}
-\DeclareBibliographyAlias{incollection}{object}
-\DeclareBibliographyAlias{thesis}{object}
 \DeclareBibliographyAlias{book}{object}
-\DeclareBibliographyAlias{online}{object}
 \DeclareBibliographyAlias{collection}{object} % TODO: editors
+\DeclareBibliographyAlias{incollection}{object}
+\DeclareBibliographyAlias{inproceedings}{object}
+\DeclareBibliographyAlias{online}{object}
+\DeclareBibliographyAlias{report}{object}
+\DeclareBibliographyAlias{thesis}{object}
 
 \DeclareBibliographyAlias{phdthesis}{thesis}
-\DeclareBibliographyAlias{report}{book} % also influences techreport
+\DeclareBibliographyAlias{techreport}{report}
 \DeclareBibliographyAlias{manual}{book}
 
 
