@@ -56,6 +56,7 @@
 }
 
 % MUSS is derived from authoryear.bbx, which extends standard.bbx.
+% Note that by default also the definitions in biblatex.def are used.
 \RequireBibliographyStyle{authoryear}
 
 % Set options defined in authoryear.
@@ -134,7 +135,7 @@
   }                               
   {\global\undef\bbx@lasthash
     \usebibmacro{labeltitle}%
-  }     
+  }%
 }
 
 \newbibmacro*{muss:booktitle}{%
@@ -149,7 +150,7 @@
       \setunit{\subtitlepunct}%
       \printfield[titlecase]{booksubtitle}}%
   }%
-  \printfield{booktitleaddon}}
+}
 
 \newbibmacro*{muss:byeditor+others}{%
   \ifnameundef{editor}
@@ -182,8 +183,8 @@
       {}
       {\printlist{publisher}}}
     {\usebibmacro{url+urldate}}}
-  {\printfield{doi}}
-}%
+  {\printfield{doi}}%
+}
 
 \newbibmacro*{muss:journal+volume+number+eid}{%
   \usebibmacro{journal}%
@@ -233,7 +234,7 @@
     test {\ifentrytype{collection}}
   }
   {\printfield{edition}}
-  {}
+  {}%
 }
 
 \newbibmacro*{muss:thesistype+institution}{%
@@ -252,7 +253,7 @@
       \setunit{\subtitlepunct}%
       \printfield[titlecase]{subtitle}}%
   }
-  \printfield{titleaddon}}
+}
 
 \newbibmacro*{muss:typeof}{%
   \ifentrytype{thesis}
@@ -266,7 +267,7 @@
   {\iffieldundef{series}
     {}
     {\printtext[parens]{\usebibmacro{series+number}}}}
-  {}
+  {}%
 }
 
 % muss:finentry is introduced to have better control.
