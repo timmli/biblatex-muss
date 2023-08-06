@@ -84,9 +84,9 @@ Take a look at [[file:test.tex]] for a complete example.
 
 * Roadmap
 
-- [ ] Overhaul muss.cbx
-      - [ ] Remove outdated code
-      - [ ] Simplify code
+- [X] Overhaul muss.cbx
+      - [X] Remove outdated code
+      - [X] Simplify code
 - [ ] Add CSL file
 - [ ] Add default value for type in @thesis
 - [ ] Add type and institution in @report
