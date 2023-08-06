@@ -1,6 +1,6 @@
 \begin{filecontents}[overwrite]{\jobname.bib}
 
-@thesis{Abney:87,
+@phdthesis{Abney:87,
   author = {Abney, Steven},
   title = {The {English} Noun Phrase in its Sentential Aspect},
   school = {MIT},
@@ -74,7 +74,7 @@
   publisher = {Cambridge University Press},
   address = {Cambridge, UK},
   title = {Heads in Grammatical Theory},
-}
+} 
 
 @book{Mueller:20-grammatical,
   author = {Müller, Stefan},
@@ -153,9 +153,11 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{verbatim}
 \usepackage{hyperref}
+% \usepackage[english]{babel}
 
-\usepackage{xcolor}
-\definecolor{lsDOIGray}{cmyk}{0,0,0,0.45}
+% Uncomment when using langsci-unified
+% \usepackage{xcolor}
+% \definecolor{lsDOIGray}{cmyk}{0,0,0,0.45}
 
 \usepackage[
   bibstyle=muss,
@@ -224,6 +226,13 @@
 \item \myfullcite{Abney:87}
 \end{itemize}
 
+\subsection{Report}
+
+\begin{itemize}
+\item \myfullcite{Penn:99-optimized}
+\end{itemize}
+
+
 \subsection{Online}
 
 \begin{itemize}
@@ -235,13 +244,6 @@
 \begin{itemize}
 \item \myfullcite{McConnel:97-PC-PATR}
 \end{itemize}
-
-\subsection{Report}
-
-\begin{itemize}
-\item \myfullcite{Penn:99-optimized}
-\end{itemize}
-
 
 \newpage
 
