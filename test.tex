@@ -18,7 +18,6 @@
   address = {Cambridge},
 }
 
-
 @inproceedings{Nallapati:etal:16,
   author = {Nallapati, Ramesh and Zhou, Bowen and dos Santos, Cicero and  Çağlar Gulçehre and Xiang, Bing},
   title = {Abstractive Text Summarization using Sequence-to-sequence {RNN}s and Beyond},
@@ -109,6 +108,43 @@
   address = {Dallas, TX}
 }
 
+@article{Chomsky:59-certain,
+  author = {Chomsky, Noam},
+  title = {On Certain Formal Properties of Grammars},
+  year = {1959},
+  volume = {2},
+  pages = {137--167},
+  journal = {Information and Control},
+  doi = {10.1016/S0019-9958(59)90362-6},
+}
+
+@article{Chomsky:59-review,
+  author = {Chomsky, Noam},
+  title = {A Review of {B. F. Skinner's} {Verbal Behavior}},
+  year = {1959},
+  volume = {35},
+  number = {1},
+  pages = {26--58},
+  journal = {Language},
+  doi = {10.2307/411334},
+}
+
+@inproceedings{Mikolov:etal:13-distributed,
+  author = {Mikolov, Tomas and Sutskever, Ilya and Chen, Kai and Corrado, Gregory S. S. and Dean, Jeffrey},
+  title = {Distributed Representations of Words and Phrases and their Compositionality},
+  booktitle = {Advances in Neural Information Processing Systems 26 (NIPS 2013)},
+  year = {2013},
+  editor = {Christopher J. C. Burges and L\'eon Bottou and Max Welling and Zoubin Ghahramani and Kilian Q. Weinberger},
+  pages = {3111--3119},
+  url = {http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf},
+}
+
+@online{Mikolov:etal:13-efficient,
+  author = {Mikolov, Tomas and Chen, Kai and Corrado, Gregory S. and Dean, Jeffrey},
+  title = {Efficient estimation of word representations in vector space},
+  year = {2013},
+  url = {http://arxiv.org/abs/1301.3781v3},
+}
 
 }
 
@@ -211,30 +247,47 @@
 
 \section{Tests of muss.cbx}
 
+\subsection{Citation commands}
+
 \begin{itemize}
-\item \verb=\nocite= \nocite{VanValin:05} \nocite{Abney:87} \nocite{Bach:80,Bach:81} \nocite{Zwicky:93} \nocite{Haagsma:etal:19-casting} \nocite{Corbett:etal:eds:93-heads} \nocite{Mueller:20-grammatical} \nocite{Penn:99-optimized} \nocite{McConnel:97-PC-PATR}
-\item \verb=\fullcite=:  \fullcite{Nallapati:etal:16}
-\item \verb=\textcite=: \textcite{Nallapati:etal:16}
-\item \verb=\parencite=: \parencite{Nallapati:etal:16}
-\item \verb=\parencite*=: \parencite*{Nallapati:etal:16}
-% \item \verb=\noparencite=: \noparencite{Nallapati:etal:16}
-% \item \verb=\noparencite*=: \noparencite*{Nallapati:etal:16}
-\item \verb=\smartcite=: \smartcite{Nallapati:etal:16}
-\item \verb=\footcite=: \footcite{Nallapati:etal:16}
-\item \verb=\footfullcite=:  \footfullcite{Nallapati:etal:16}
-\item \verb=\supercite=: \supercite{Nallapati:etal:16}
-\item \verb=\footcitetext=: \footcitetext{Nallapati:etal:16}
-\item \verb=\cite=:  \cite{Nallapati:etal:16}
-\item \verb=\cite*=:  \cite*{Nallapati:etal:16}
-\item \verb=\citeauthor=: \citeauthor{Nallapati:etal:16}
-\item \verb=\citeauthor*=: \citeauthor*{Nallapati:etal:16}
-\item \verb=\citeurl=: \citeurl{Nallapati:etal:16}
-\item \verb=\citetitle=: \citetitle{Nallapati:etal:16}
-\item \verb=\citeyear=: \citeyear{Nallapati:etal:16}
+\item \verb=\nocite= \nocite{VanValin:05} \nocite{Abney:87} \nocite{Bach:80,Bach:81} \nocite{Zwicky:93} \nocite{Haagsma:etal:19-casting} \nocite{Corbett:etal:eds:93-heads} \nocite{Mueller:20-grammatical} \nocite{Nallapati:etal:16} \nocite{Penn:99-optimized} \nocite{McConnel:97-PC-PATR}
+\item \verb=\fullcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline  \fullcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\textcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \textcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\parencite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \parencite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\parencite*[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \parencite*[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\smartcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \smartcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\footcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \footcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\footfullcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline  \footfullcite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\supercite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \supercite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\footcitetext[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \footcitetext[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\autocite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline  \autocite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\cite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline  \cite[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\cite*[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline  \cite*[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\citeauthor[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \citeauthor[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\citeauthor*[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \citeauthor*[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\citeurl[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \citeurl[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\citetitle[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \citetitle[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
+\item \verb=\citeyear[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}= \newline \citeyear[$<$prenote$>$][$<$postnote$>$]{Nallapati:etal:16}
 \end{itemize} 
 
-\newpage
+\subsection{Sorting of keys}
 
+\begin{itemize}
+\item \verb=\textcite{Zwicky:93,Abney:87}= \newline \textcite{Zwicky:93,Abney:87}
+\item \verb=\parencite{Zwicky:93,Abney:87}= \newline \parencite{Zwicky:93,Abney:87}
+\end{itemize}
+
+\subsection{Unique labels}
+
+\begin{itemize}
+\item \verb=\textcite{Chomsky:59-review,Chomsky:59-certain}= \newline \textcite{Chomsky:59-review,Chomsky:59-certain}
+\item \verb=\textcite{Mikolov:etal:13-efficient,Mikolov:etal:13-distributed}= \newline \textcite{Mikolov:etal:13-efficient,Mikolov:etal:13-distributed}
+\end{itemize}
+
+
+
+\newpage
+ 
 \printbibliography 
 \end{document}
 
