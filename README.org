@@ -27,7 +27,7 @@ MUSS comes with two files:
 
 List of currently supported entry types:
 article, book, collection, incollection, inproceedings, manual, online, (phd)thesis,
-(tech)report, thesis
+(tech)report
 
 List of currently supported entry fields (depending on the entry type):
 author, booksubtitle, booktitle, doi, edition, editor, institution, journal, note, number, pages,
