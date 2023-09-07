@@ -183,11 +183,18 @@
 }
 
 \newbibmacro*{muss:doi+url+publisher}{%
+  \ifboolexpr{
+    test {\ifentrytype{book}}
+    or
+    test {\ifentrytype{collection}}
+    or
+    test {\ifentrytype{incollection}}
+  }
+  {\printlist{publisher}\newunit}
+  {}%
   \iffieldundef{doi}
   {\iffieldundef{url}
-    {\ifentrytype{article}
-      {}
-      {\printlist{publisher}}}
+    {}
     {\usebibmacro{url+urldate}}}
   {\printfield{doi}}%
 }
@@ -238,6 +245,8 @@
     test {\ifentrytype{book}}
     or
     test {\ifentrytype{collection}}
+    or
+    test {\ifentrytype{incollection}}
   }
   {\printfield{edition}}
   {}%
@@ -278,6 +287,8 @@
     test {\ifentrytype{book}}
     or
     test {\ifentrytype{collection}}
+    or
+    test {\ifentrytype{incollection}}
   }
   {\iffieldundef{series}
     {}
@@ -302,8 +313,8 @@
   \usebibmacro{begentry}%
   \ifentrytype{collection}
   {\usebibmacro{muss:editor+others}}
-  {\usebibmacro{muss:author}}
-  \newunit
+  {\usebibmacro{muss:author}}%
+  \newunit%
   \usebibmacro{muss:date+extradate}%
   \setunit{\printdelim{nametitledelim}}%
   \newblock%
