@@ -39,17 +39,17 @@ Yes, there is no address field; this is a deliberate decision.
 
 MUSS assumes that an entry in the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, LINK and NOTE, which are associated with different fields depending on the type of reference:
 
-| Entry parts $\to$  | AUTHOR | YEAR | TITLE           | TYPEOF                   | PARTOF                         | LINK                      | NOTE |
-|------------------+--------+------+-----------------+--------------------------+--------------------------------+---------------------------+------|
-| article          | author | year | title           |                          | journal, pages, volume, number | doi/url+urldate           | note |
-| book             | author | year | title           | series, number           | edition                        | doi/url+urldate/publisher | note |
-| collection       | editor | year | title/booktitle | series, number           | edition                        | doi/url+urldate/publisher | note |
-| incollection     | author | year | title           |                          | @collection, pages             | doi/url+urldate           | note |
-| inproceedings    | author | year | title           |                          | booktitle, pages               | doi/url+urldate           | note |
-| manual           | author | year | title           |                          |                                | doi/url+urldate           | note |
-| online           | author | year | title           |                          |                                | doi/url+urldate           | note |
-| (phd)thesis      | author | year | title           | type, school/instutition |                                | doi/url+urldate           | note |
-| (tech)report     | author | year | title           | type, institution        |                                | doi/url+urldate           | note |
+| Entry parts $\to$ | AUTHOR | YEAR | TITLE           | TYPEOF                   | PARTOF                         | LINK                       | NOTE |
+|-----------------+--------+------+-----------------+--------------------------+--------------------------------+----------------------------+------|
+| article         | author | year | title           |                          | journal, pages, volume, number | doi/url+urldate            | note |
+| book            | author | year | title           | series, number           | edition                        | publisher, doi/url+urldate | note |
+| collection      | editor | year | title/booktitle | series, number           | edition                        | publisher, doi/url+urldate | note |
+| incollection    | author | year | title           |                          | @collection, pages             | doi/url+urldate            | note |
+| inproceedings   | author | year | title           |                          | booktitle, pages               | doi/url+urldate            | note |
+| manual          | author | year | title           |                          |                                | doi/url+urldate            | note |
+| online          | author | year | title           |                          |                                | doi/url+urldate            | note |
+| (phd)thesis     | author | year | title           | type, school/instutition |                                | doi/url+urldate            | note |
+| (tech)report    | author | year | title           | type, institution        |                                | doi/url+urldate            | note |
 
 Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
 
@@ -59,11 +59,11 @@ MUSS differs from USS in the following details:
 - PARTOF is preceded by "In" also with articles. In USS, journal names are not preceded by "In".
 - There is no address field. Never.
 - If no DOI is provided, the URL is printed. Not both.
-- The publisher is only printed with books and collections if no URL is given.
+- The publisher is only printed with books and collections.
 
 For comparison, see the output of MUSS in [[file:test.pdf]] and the output of USS in [[file:test-langsci-uss.pdf]] using langsci-unified.bbx.
 
-[[file:comparison1.png]]
+[[file:comparison2.png]]
 
 * Requirements and dependencies
 
