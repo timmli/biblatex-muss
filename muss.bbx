@@ -1,7 +1,7 @@
 % File:    muss.bbx
 % Author:  Timm Lichte (http://timm-lichte.de)
-% Date:    2023-09-08T08:22:29+0200
-% Version: 0.3 (tested with BibLaTeX v3.19)
+% Date:    2023-09-08T09:04:24+0200
+% Version: 0.4 (tested with BibLaTeX v3.19)
 % License: LPPL Version 1.3c
 %
 % ----------------------------------
@@ -37,8 +37,8 @@
 % techreport, thesis
 %
 % List of currently supported entry fields (depending on the entry type):
-% author, booksubtitle, booktitle, doi, edition, editor, institution, journal, note, number, pages,
-% publisher, school, subtitle, title, type, url, urldate, volume, year
+% author, booktitle, doi, edition, editor, institution, journal, note, number, pages,
+% publisher, school, title, type, url, urldate, volume, year
 %
 % Yes, there is no address field; this is a deliberate decision.
 %
@@ -90,7 +90,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%% 
 
 \renewcommand*{\intitlepunct}{\addspace} % Remove colon from "In:".
-\renewcommand*{\subtitlepunct}{\addcolon\space} % Separate title and subtitle with a colon
 \renewcommand*{\finalnamedelim}{\addspace\&\addspace} % Use ampersand in name lists
 \renewcommand*{\finallistdelim}{\addspace\&\addspace} % Use ampersand in name lists
 % \renewcommand*{\finentrypunct}{} % Remove period from end of entry.
@@ -145,16 +144,10 @@
 }
 
 \newbibmacro*{muss:booktitle}{%
-  \ifboolexpr{
-    test {\iffieldundef{booktitle}}
-    and
-    test {\iffieldundef{booksubtitle}}
-  }
+  \iffieldundef{booktitle}
   {}
   {\printtext[booktitle]{%
-      \printfield[titlecase]{booktitle}%
-      \setunit{\subtitlepunct}%
-      \printfield[titlecase]{booksubtitle}}%
+      \printfield[titlecase]{booktitle}}%
   }%
 }
 
@@ -262,16 +255,10 @@
 }
 
 \newbibmacro*{muss:title}{%
-  \ifboolexpr{
-    test {\iffieldundef{title}}
-    and
-    test {\iffieldundef{subtitle}}
-  }
+  \iffieldundef{title}
   {}
   {\printtext[title]{%
-      \printfield[titlecase]{title}%
-      \setunit{\subtitlepunct}%
-      \printfield[titlecase]{subtitle}}%
+      \printfield[titlecase]{title}}%
   }
 }
 
