@@ -30,8 +30,8 @@ article, book, collection, incollection, inproceedings, manual, online, (phd)the
 (tech)report
 
 List of currently supported entry fields (depending on the entry type):
-author, booksubtitle, booktitle, doi, edition, editor, institution, journal, note, number, pages,
-publisher, school, subtitle, title, type, url, urldate, volume, year
+author, booktitle, doi, edition, editor, institution, journal, note, number, pages,
+publisher, school, title, type, url, urldate, volume, year
 
 Yes, there is no address field; this is a deliberate decision.
 
