@@ -1,4 +1,4 @@
-#+TITLE: MUSS: Minimal Unified Style Sheet
+#+TITLE: MUSS: Minimal Unified Style Sheet for Computational Linguistics
 #+AUTHOR: Timm Lichte
 
 This README uses [[https://orgmode.org/][Org mode]].
