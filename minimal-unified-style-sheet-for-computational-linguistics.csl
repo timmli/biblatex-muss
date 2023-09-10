@@ -2,7 +2,7 @@
 <style class="in-text" version="1.0" default-locale="en-US" xmlns="http://purl.org/net/xbiblio/csl">
   <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
-    <title>Minimal unified style sheet for computational linguistics</title>
+    <title>Minimal Unified Style Sheet for Computational Linguistics</title>
     <title-short>MUSS</title-short>
     <id>http://www.zotero.org/styles/minimal-unified-style-sheet-for-computational-linguistics</id>
     <link rel="self" href="http://www.zotero.org/styles/minimal-unified-style-sheet-for-computational-linguistics"/>
@@ -14,7 +14,7 @@
     <category field="(computational) linguistics"/>
     <category field="natural language processing"/>
     <summary>https://github.com/timmli/biblatex-muss</summary>
-    <updated>2023-09-10T20:57:30+00:00</updated>
+    <updated>2023-09-10T21:42:26+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License</rights>
   </info>
   <locale>
