@@ -39,7 +39,7 @@ Yes, there is no address field; this is a deliberate decision.
 
 MUSS assumes that an entry in the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, LINK and NOTE, which are associated with different fields depending on the type of reference:
 
-| Entry parts $\to$ | AUTHOR | YEAR | TITLE           | TYPEOF                   | PARTOF                         | LINK                       | NOTE |
+| Entry parts $\to$ | AUTHOR | YEAR | TITLE           | TYPEOF                   | PARTOF                         | ACCESS                     | NOTE |
 |-----------------+--------+------+-----------------+--------------------------+--------------------------------+----------------------------+------|
 | article         | author | year | title           |                          | journal, pages, volume, number | doi/url+urldate            | note |
 | book            | author | year | title           | series, number           | edition                        | publisher, doi/url+urldate | note |
@@ -89,4 +89,4 @@ Take a look at [[file:test.tex]] for a complete example.
       - [X] Simplify code
 - [X] Add default value for type in @thesis
 - [X] Add type and institution in @report
-- [ ] Add CSL file
+- [X] Add CSL file
