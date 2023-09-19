@@ -7,7 +7,7 @@ This README uses [[https://orgmode.org/][Org mode]].
 
 MUSS is a style sheet for BibLaTeX that seeks minimality in different ways:
 
-1) Minimality of supported entry types: MUSS supports only a small set of entry types and fields that I consider most important in my field (natural language processing). 
+1) Minimality of supported entry types: MUSS supports only a small set of entry types and fields that I consider most important in my field (computational linguistics/natural language processing). 
 2) Minimality of backward compatiblity: MUSS will only be compatible with recent versions of BibLaTeX.
 3) Minimality of code: Because of (1) and (2), MUSS has a very slim codebase and is maximally self-contained. In fact, there is only *one* generic driver which is used for articles, books, etc.
 
@@ -37,7 +37,7 @@ Yes, there is no address field; this is a deliberate decision.
 
 * The entry structure of MUSS
 
-MUSS assumes that an entry in the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, LINK and NOTE, which are associated with different fields depending on the type of reference:
+MUSS assumes that an entry in the list of references consists of the parts AUTHOR, YEAR, TITLE, TYPEOF, PARTOF, ACCESS and NOTE, which are associated with different fields depending on the type of reference:
 
 | Entry parts $\to$ | AUTHOR | YEAR | TITLE           | TYPEOF                   | PARTOF                         | ACCESS                     | NOTE |
 |-----------------+--------+------+-----------------+--------------------------+--------------------------------+----------------------------+------|
