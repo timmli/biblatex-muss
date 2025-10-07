@@ -60,6 +60,7 @@ MUSS differs from USS in the following details:
 - There is no address field. Never.
 - If no DOI is provided, the URL is printed. Not both.
 - The publisher is only printed with books and collections.
+- Notes are printed in square brackets at the very end to make them easier to recognize.
 
 For comparison, see the output of MUSS in [[file:test.pdf]] and the output of USS in [[file:test-langsci-uss.pdf]] using langsci-unified.bbx.
 
