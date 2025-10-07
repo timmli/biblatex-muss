@@ -62,13 +62,13 @@ MUSS differs from USS in the following details:
 - The publisher is only printed with books and collections.
 - Notes are printed in square brackets at the very end to make them easier to recognize.
 
-For comparison, see the output of MUSS in [[file:test.pdf]] and the output of USS in [[file:test-langsci-uss.pdf]] using langsci-unified.bbx.
+For comparison, see the output of MUSS in [[file:tests/test-muss.pdf]] and the output of USS in [[file:tests/test-langsci-unified.pdf]] using langsci-unified.bbx.
 
-[[file:comparison2.png]]
+[[file:comparison.png]]
 
 * Requirements and dependencies
 
-The most recent version of MUSS is tested with BibLaTeX v3.19.
+The most recent version of MUSS is tested with BibLaTeX v3.20.
 
 * Installation and use
 
@@ -81,7 +81,7 @@ Simply copy muss.bbx and muss.cbx to your LaTeX project and tell BibLaTeX to use
   ]{biblatex}
 #+END_SRC
 
-Take a look at [[file:test.tex]] for a complete example.
+Take a look at [[file:tests/test-muss.tex]] for a complete example.
 
 * Roadmap
 
