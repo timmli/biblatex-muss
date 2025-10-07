@@ -55,7 +55,7 @@ Note that MUSS itself does not distinguish between obligatory and optional field
 
 * Differences to the Unified Style Sheet
 
-MUSS mainly differs from USS in the following details:
+MUSS mainly differs from USS (i.e. the langsci-unified implementation) in the following details:
 - PARTOF is preceded by "In" also with articles. In USS, journal names are not preceded by "In".
 - There is no address field. Never.
 - If no DOI is provided, the URL is printed. Not both.
