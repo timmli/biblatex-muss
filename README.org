@@ -14,7 +14,7 @@ MUSS is a style sheet for BibLaTeX that seeks minimality in different ways:
 MUSS was heavily inspired by, but uses only certain characteristics of,
 
 - Unified Style Sheet for Linguistics (USS), a set of general style rules for references
-  (see https://www.lsadc.org/resources_list.asp?d=8&c=13&i=22)
+  (see https://langsci-press.org/unifiedstylesheet)
 - langsci-unified.bbx, a BibLaTeX implementation of the USS that is part of the
   langscibook class (see https://github.com/langsci/langscibook),
   and therefore also biblatex-unified.bbx, on which langsci-unified.bbx is based
