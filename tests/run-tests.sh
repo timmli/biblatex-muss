@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=("test-langsci-unified" "test-muss")
+FILES=("test-muss" "test-langsci-unified" "test-unified")
 
 for FILE in "${FILES[@]}"; do
 

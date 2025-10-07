@@ -1,0 +1,58 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{verbatim}
+\usepackage{hyperref}
+% \usepackage[english]{babel}
+
+\usepackage{xcolor}
+\definecolor{lsDOIGray}{cmyk}{0,0,0,0.45}
+
+\usepackage[
+  bibstyle=../other/unified,
+  citestyle=../other/unified,
+  maxbibnames=99,               % show all authors
+  ]{biblatex}
+\addbibresource{references.bib}
+
+\makeatletter
+\DeclareCiteCommand{\myfullcite}
+{% precode
+  \defcounter{maxnames}{\blx@maxbibnames}%
+}
+{%loopcode
+  \usedriver
+  {}
+  {\thefield{entrytype}}}
+{%sepcode
+}
+{%postcode
+}
+\makeatother
+ 
+\listfiles                      % print list of used packages in log file 
+
+\title{Tests of unified}
+
+\begin{document}
+
+\maketitle
+
+\section{Tests of unified.cbx}
+
+\input{cbx-tests.tex}
+
+\newpage
+
+\section{Tests of unified.bbx}
+
+\input{bbx-tests.tex}
+
+\newpage
+ 
+\printbibliography 
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
