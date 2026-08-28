@@ -104,7 +104,7 @@
 % Display pages without page prefix (p., pp.)
 \DeclareFieldFormat{pages}{#1}
 
-% No quotes around titles (drivers have to be specified)
+% No quotes around titles (inherited drivers have to be specified)
 \DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,report,unpublished]{title}{#1}
 
 % The titles of books, reports and theses are printed with italics.
@@ -306,7 +306,7 @@
   \usebibmacro{muss:date+extradate}%
   \setunit{\printdelim{nametitledelim}}%
   \newblock%
-  \usebibmacro{muss:title}% booktitle is not considered here
+  \usebibmacro{muss:title}% booktitle is considered in muss:partof
   \setunit{\addspace}%
   \usebibmacro{muss:typeof}%
   \newunit%
@@ -331,8 +331,10 @@
 \DeclareBibliographyAlias{online}{object}
 \DeclareBibliographyAlias{report}{object}
 \DeclareBibliographyAlias{thesis}{object}
+\DeclareBibliographyAlias{unpublished}{object}
 
 \DeclareBibliographyAlias{phdthesis}{thesis}
+\DeclareBibliographyAlias{masterthesis}{thesis}
 \DeclareBibliographyAlias{techreport}{report}
 \DeclareBibliographyAlias{manual}{book}
 
