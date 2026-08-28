@@ -109,16 +109,16 @@
 % Display pages without page prefix (p., pp.)
 \DeclareFieldFormat{pages}{#1}
 
-% Titles are not formatted by default.
-\DeclareFieldFormat{title}{#1}
-
 % No quotes around titles (inherited drivers have to be specified)
 \DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,report,unpublished]{title}{#1}
+
+% The titles of books, reports and theses are printed with italics.
+\DeclareFieldFormat[book,collection,report,thesis]{title}{\mkbibemph{#1}}
 
 % Put square brackets around note.
 \DeclareFieldFormat{note}{\mkbibbrackets{#1}}
 
-% The booktitles that appear in muss:partof are emphasized.
+% The booktitles are printed with italics.
 \DeclareFieldFormat{booktitle}{\mkbibemph{#1}}
 
 \DeclareFieldFormat{doi}{%
