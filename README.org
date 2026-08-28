@@ -53,6 +53,10 @@ MUSS assumes that an entry in the list of references consists of the parts AUTHO
 
 Note that MUSS itself does not distinguish between obligatory and optional fields. Missing fields are simply ignored.
 
+The following decision tree summarizes the most common publication types and their specific fields:
+
+[[file:publication-decision-tree.png]]
+
 * Differences to the Unified Style Sheet
 
 MUSS mainly differs from USS (i.e. the langsci-unified implementation) in the following details:
