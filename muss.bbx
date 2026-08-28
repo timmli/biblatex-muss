@@ -1,44 +1,49 @@
 % File:    muss.bbx
 % Author:  Timm Lichte (http://timm-lichte.de)
-% Date:    2026-03-13T12:55:34+0100
-% Version: 0.6 (tested with BibLaTeX v3.20)
+% Date:    2026-08-28T11:32:53+0200
+% Version: 0.7 (tested with BibLaTeX v3.20)
 % License: LPPL Version 1.3c
 %
 % ----------------------------------------------------------------
 % MUSS: Minimal Unified Style Sheet for Computational Linguistics
 % ----------------------------------------------------------------
 %
-% MUSS is a style sheet for BibLaTeX that seeks minimality in different ways:
+% MUSS is a style sheet for BibLaTeX that seeks minimality in
+% different ways:
 %
-% (1) Minimality of supported entry types: MUSS supports only a small set of entry types and
-%     fields that I consider most important in my field (natural language processing). 
-% (2) Minimality of backward compatiblity: MUSS will only be compatible with recent
-%     versions of BibLaTeX.
-% (3) Minimality of code: Because of (1) and (2), MUSS has a very slim codebase and is maximally
-%     self-contained. In fact, there is only *one* generic driver which is used for articles,
-%     books, etc.
+% (1) Minimality of supported entry types: MUSS supports only a small
+%     set of entry types and fields that I consider most important in 
+%     my field (natural language processing).
+% (2) Minimality of backward compatiblity: MUSS will only be
+%     compatible with recent versions of BibLaTeX.
+% (3) Minimality of code: Because of (1) and (2), MUSS has a very slim
+%     codebase and is maximally self-contained. In fact, there is only
+%     *one* generic driver which is used for articles, books, etc.
 %
 % MUSS was heavily inspired by, but uses only certain characteristics of,
 %
 % - Unified Style Sheet (USS), a set of general style rules for references
 %   (see https://www.linguisticsociety.org/resource/unified-style-sheet)
-% - langsci-unified.bbx, a BibLaTeX implementation of the USS that is part of the
-%   langscibook class (see https://github.com/langsci/langscibook),
-%   and therefore also biblatex-unified.bbx, on which langsci-unified.bbx is based
+% - langsci-unified.bbx, a BibLaTeX implementation of the USS that is
+%   part of the langscibook class (see
+%   https://github.com/langsci/langscibook), and therefore also
+%   biblatex-unified.bbx, on which langsci-unified.bbx is based
 %   (see https://github.com/semprag/biblatex-sp-unified)
 %
 % MUSS comes with two files:
 %
-% - muss.bbx (this file) specifies the structure and formatting of entries in a list of references.
+% - muss.bbx (this file) specifies the structure and formatting of
+%   entries in a list of references.
 % - muss.cbx specifies the look of cite commands in the text.
 %
 % List of currently supported entry types:
-% article, book, collection, incollection, inproceedings, manual, online, phdthesis,
-% techreport, thesis
+% article, book, collection, incollection, inproceedings, manual,
+% online, (phd/master)thesis, (tech)report, thesis, unpublished
 %
 % List of currently supported entry fields (depending on the entry type):
-% author, booktitle, doi, edition, editor, institution, journal, note, number, pages,
-% publisher, school, title, type, url, urldate, volume, year
+% author, booktitle, doi, edition, editor, institution, journal, note,
+% number, pages, publisher, school, title, type, url, urldate, volume,
+% year
 %
 % Yes, there is no address field; this is a deliberate decision.
 %
